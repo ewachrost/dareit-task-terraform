@@ -21,4 +21,14 @@ resource "google_compute_instance" "dareit-vm-ci" {
       // Ephemeral public IP
     }
   }
+
+  resource "google_storage_bucket" "kubelek" {
+ project       = "potent-bloom-377613"
+ name          = "kubelek_calkiem_nowy"
+ location      = "US"
+ storage_class = "STANDARD"
+
+uniform_bucket_level_access = false
+
+}
 }
