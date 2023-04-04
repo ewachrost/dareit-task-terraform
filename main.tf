@@ -22,7 +22,7 @@ resource "google_compute_instance" "dareit-vm-ci" {
     }
   }
 
-    resource "google_storage_bucket" "kubelek" {
+  resource "google_storage_bucket" "kubelek" {
  project       = "potent-bloom-377613"
  name          = "kubelek_calkiem_nowy"
  location      = "US"
