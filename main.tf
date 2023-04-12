@@ -58,7 +58,7 @@ resource "google_storage_bucket_access_control" "public_rule" {
 
 resource "google_storage_bucket_object" "dareit-bucket-ci-sw-src-photo" {
   name   = "kot.jpg"
-  source = "public/kot.jpg"
+  source = "images/kot.jpg"
   content_type = "image/jpg"
   bucket = google_storage_bucket.dareit-bucket-ci-sw.id
 }
