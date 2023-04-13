@@ -55,3 +55,9 @@ resource "google_storage_bucket_access_control" "public_rule" {
   entity = "allUsers"
 
 }
+
+resource "google_storage_bucket_object" "dareit-bucket-ci-sw-src-2" {
+  name   = "cat.jpg"
+  source = "website/cat.jpg"
+  bucket = google_storage_bucket.dareit-bucket-ci-sw-1.name
+}
