@@ -61,3 +61,19 @@ resource "google_storage_bucket_object" "dareit-bucket-ci-sw-src-2" {
   source = "website/cat.jpg"
   bucket = google_storage_bucket.dareit-bucket-ci-sw-1.name
 }
+
+resource "google_storage_bucket" "dareit-bucket-ci-sw-2" {
+ project       = "potent-bloom-377613"
+ name          = "dareit-bucket-tf-ci-sw-2"
+ location      = "US"
+ storage_class = "STANDARD"
+
+uniform_bucket_level_access = false
+}
+
+resource "google_storage_bucket_access_control" "public_rule_2" {
+  bucket = google_storage_bucket.dareit-bucket-ci-sw-2.id
+  role   = "READER"
+  entity = "allUsers"
+
+}
