@@ -3,6 +3,8 @@ resource "google_compute_instance" "dareit-vm-ci-sw-1" {
   machine_type = "e2-medium"
   zone         = "us-central1-a"
 
+  overwrite = true
+
   tags = ["dareit"]
 
   boot_disk {
