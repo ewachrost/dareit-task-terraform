@@ -22,9 +22,6 @@ resource "google_compute_instance" "dareit-vm-ci-sw-1" {
       // Ephemeral public IP
     }
   }
-
-  overwrite = true
-  
 }
 resource "google_storage_bucket" "dareit-bucket-ci-sw-1" {
  project       = "potent-bloom-377613"
